@@ -3,22 +3,15 @@
     <head>
         <meta charset="UTF-8">
         <title>New Balance</title>
-        <link rel="stylesheet" href="updated-balance.css">
+        <link rel="stylesheet" href="calendar.css">
         <script type="text/javascript" src='calendar.js'></script>
         <script type="text/javascript" src='currency-generator.js'></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-        <script src="./myChart.js"></script>
     </head>
     <body>
     <div class="message">
         <div class="new-balance">Your current balance is £<span id="moneymoneymoney"></span></div>
     </div>
     <div class="date">Today's Date: <span id="date" onload="calendar.getCurrentDate()"></span></div>
-    <div class="container">
-        <canvas id="myChart"></canvas>
-        <script>renderChart()</script>
-    </div>
     <script>calendar.timedUpdated()</script>
     </body>
 </html>

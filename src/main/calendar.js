@@ -17,9 +17,9 @@ const calendar = {
         calendar.incrementDays(calendar.aDate)
         if (calendar.index < 363) {
             calendar.index++;
-            window.setTimeout(calendar.timedUpdated, 100)
-            window.setTimeout(randomAmount(1000000), 100)
-            window.setTimeout(addAllData, 100)
+            let timeout = 75
+            window.setTimeout(calendar.timedUpdated, timeout)
+            window.setTimeout(randomAmount(1000000), timeout)
         } else {
             window.location.href = 'updated-balance.html'
         }
