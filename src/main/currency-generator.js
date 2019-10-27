@@ -18,4 +18,10 @@ let splitData;
 
 function updateCurrency(amount) {
   document.getElementById('moneymoneymoney').innerHTML = Math.ceil(amount).toLocaleString();
+  getProfit()
+}
+
+function getProfit() {
+    let amount = (1000000 / splitData[0]) * splitData[calendar.index];
+    document.getElementById('profit').innerHTML = Math.ceil(amount).toLocaleString();
 }
