@@ -11,15 +11,14 @@
         <script src="./myChart.js"></script>
     </head>
     <body>
-    <div id="line-graph"></div>
-    <div class="date">Today's Date: <span id="date" onload="calendar.getCurrentDate()"></span></div>
-    <script>calendar.timedUpdated()</script>
     <div class="message">
         <div class="new-balance">Your current balance is £<span id="moneymoneymoney"></span></div>
     </div>
+    <div class="date">Today's Date: <span id="date" onload="calendar.getCurrentDate()"></span></div>
     <div class="container">
         <canvas id="myChart"></canvas>
         <script>renderChart()</script>
     </div>
+    <script>calendar.timedUpdated()</script>
     </body>
 </html>

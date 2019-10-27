@@ -8,7 +8,7 @@ function getRandomNumber() {
     if (index % 2 === 0) {
         return randomNumber;
     } else {
-        return 1 + randomNumber;
+        return 2 - randomNumber;
     }
 }
 

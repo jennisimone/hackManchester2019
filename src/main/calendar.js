@@ -1,6 +1,7 @@
 const calendar = {
     aDate: new Date('October 27, 2018'),
     index: 0,
+    allDates: [],
     incrementDays: function (date) {
         date.setDate(date.getDate() + 1)
         document.getElementById('date').innerHTML = date.toDateString()
@@ -8,6 +9,7 @@ const calendar = {
     },
 
     getCurrentDate: function () {
+        calendar.allDates.push(calendar.aDate);
         return calendar.aDate;
     },
 
@@ -19,7 +21,7 @@ const calendar = {
             window.setTimeout(randomAmount(1000000), 100)
             window.setTimeout(addAllData, 100)
         } else {
-            // window.location.href = 'updated-balance.html'
+            window.location.href = 'updated-balance.html'
         }
     }
 }
