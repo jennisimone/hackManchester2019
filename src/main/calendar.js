@@ -19,7 +19,7 @@ const calendar = {
             calendar.index++;
             let timeout = 75
             window.setTimeout(calendar.timedUpdated, timeout)
-            window.setTimeout(randomAmount(1000000), timeout)
+            window.setTimeout(randomAmount, timeout)
         } else {
             window.location.href = 'updated-balance.html'
         }
