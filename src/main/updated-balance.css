@@ -1,0 +1,33 @@
+body {
+    background-color: #204356;
+    color: white;
+    font-size: 28px;
+    font-family: Trebuchet MS, serif;
+}
+
+.date {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+}
+
+.message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.new-balance {
+    font-size: 40px;
+}
+
+.thanks-message {
+    font-size: 28px;
+}
+
+#line-graph {
+    height: 30%;
+    width: auto;
+}
