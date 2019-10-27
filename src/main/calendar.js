@@ -13,15 +13,28 @@ const calendar = {
         return calendar.aDate;
     },
 
-    timedUpdated: function () {
-        calendar.incrementDays(calendar.aDate)
-        if (calendar.index < 363) {
-            calendar.index++;
-            let timeout = 75
-            window.setTimeout(calendar.timedUpdated, timeout)
-            window.setTimeout(randomAmount, timeout)
-        } else {
-            window.location.href = 'updated-balance.html'
-        }
+    getSplitData: function() {
+        fetch('https://pastebin.com/raw/NqK7g4mB').then(response => {
+            splitData = response.text().then((data) => {
+              splitData = data.split(',');
+              calendar.timedUpdated();
+            });
+        });
+    },
+
+    timedUpdated: function() {
+      calendar.incrementDays(calendar.aDate)
+      if (calendar.index < 363) {
+        calendar.index++;
+        let timeout = 75
+        window.setTimeout(calendar.timedUpdated, timeout)
+        window.setTimeout(() => updateCurrency(splitData[calendar.index]), timeout)
+      } else {
+        window.location.href = 'updated-balance.html'
+      }
+    },
+
+    init: function() {
+      calendar.getSplitData();
     }
 }

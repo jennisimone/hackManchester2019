@@ -16,20 +16,6 @@ let number = 1000000
 let priceData = [number]
 let splitData;
 
-// function randomAmount(currentAmount) {
-//     number = currentAmount * getRandomNumber();
-//     priceData.push(number);
-//     document.getElementById('moneymoneymoney').innerHTML = Math.ceil(number).toLocaleString();
-// }
-
-$.get('https://pastebin.com/raw/NqK7g4mB', function (data) {
-    splitData = data.split(',')
-})
-
-function randomAmount() {
-    splitData.forEach(singleData => {
-        priceData.push(singleData);
-        document.getElementById('moneymoneymoney').innerHTML = Math.ceil(singleData).toLocaleString();
-    });
+function updateCurrency(amount) {
+  document.getElementById('moneymoneymoney').innerHTML = Math.ceil(amount).toLocaleString();
 }
-

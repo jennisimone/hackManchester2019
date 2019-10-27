@@ -4,16 +4,18 @@
         <meta charset="UTF-8">
         <title>New Balance</title>
         <link rel="stylesheet" href="calendar.css">
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  			  crossorigin="anonymous"></script>
+          <script type="text/javascript" src='currency-generator.js'></script>
         <script type="text/javascript" src='calendar.js'></script>
-        <script type="text/javascript" src='currency-generator.js'></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     </head>
-    <body>
+    <body onload="calendar.init()">
     <div class="message">
         <div class="new-balance">Your current balance is £<span id="moneymoneymoney"></span></div>
     </div>
     <div class="date">Today's Date: <span id="date" onload="calendar.getCurrentDate()"></span></div>
-    <script>calendar.timedUpdated()</script>
+
     </body>
 </html>
