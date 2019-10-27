@@ -6,6 +6,9 @@
         <link rel="stylesheet" href="updated-balance.css">
         <script type="text/javascript" src='calendar.js'></script>
         <script type="text/javascript" src='currency-generator.js'></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="./myChart.js"></script>
     </head>
     <body>
     <div id="line-graph"></div>
@@ -13,6 +16,10 @@
     <script>calendar.timedUpdated()</script>
     <div class="message">
         <div class="new-balance">Your current balance is £<span id="moneymoneymoney"></span></div>
+    </div>
+    <div class="container">
+        <canvas id="myChart"></canvas>
+        <script>renderChart()</script>
     </div>
     </body>
 </html>

@@ -17,8 +17,9 @@ const calendar = {
             calendar.index++;
             window.setTimeout(calendar.timedUpdated, 100)
             window.setTimeout(randomAmount(1000000), 100)
+            window.setTimeout(addAllData, 100)
         } else {
-            window.location.href = 'updated-balance.html'
+            // window.location.href = 'updated-balance.html'
         }
     }
 }

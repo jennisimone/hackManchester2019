@@ -13,9 +13,10 @@ function getRandomNumber() {
 }
 
 let number = 1000000
+let priceData = [number]
 
 function randomAmount(currentAmount) {
     number = currentAmount * getRandomNumber();
-    append(number);
+    priceData.push(number);
     document.getElementById('moneymoneymoney').innerHTML = Math.ceil(number).toLocaleString();
 }
